@@ -1,13 +1,13 @@
 import {Professional} from "./professional";
 import {Movie} from "./movie";
 
-let professional1: Professional = new Professional ("Pepito",45,70,185,true,"Española",4,"cantante");
+let actor1: Professional = new Professional ("Pepito",45,70,185,true,"Española",4,"cantante");
 
-let professional2: Professional = new Professional ("Nanito",26,85,192,false,"Española",4,"peluquero");
+let actor2: Professional = new Professional ("Nanito",26,85,192,false,"Española",4,"peluquero");
 
-let professional3: Professional = new Professional ("Mayte",32,60,1170,true,"Española",4,"bailarina");
-let actores: Professional[] = [professional1,professional2,professional3]
-
+let actor3: Professional = new Professional ("Mayte",32,60,1170,true,"Española",4,"bailarina");
+let actores: Professional[] = [actor1,actor2,actor3]
+// let actores: Professional[] = [actor1]
 // let actor1: Professional = new Professional ("Teresa",26,55,1170,true,"Española",4,"bailarina");
 // let actor2: Professional = new Professional ("Elena",24,57,1170,false,"Española",4,"bailarina");
 let guionista: Professional = new Professional ("Sofía",23,56,1170,true,"Española",4,"bailarina");
@@ -24,8 +24,9 @@ pelicula.isMCU = false;
 pelicula.mainCharacterName = "Paco";
 pelicula.producer = "Pablo";
 pelicula.distributor = "Walt Disney";
+// console.log(pelicula.actors)
 
-console.log(pelicula.printMovie())
+pelicula.printMovie()
 
 
 

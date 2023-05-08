@@ -32,7 +32,12 @@ export class Movie {
         this.genre = genre;
     }
     //MÉTODOS
+    // public datosMovie(): string {
+    //     return `${"\n"}El título es: ${this.title}${"\n"}El año de lanzamiento es: ${this.releaseYear}${"\n"}El reparto está formado por: ${this.actors}`
+    // }
     public printMovie(){
-        console.log(this.title, this.releaseYear, this.actors, this.nacionality, this.director, this.writer, this.language, this.platform, this.isMCU, this.mainCharacterName, this.producer, this.distributor, this.genre)
+        console.log("El título de la película es: ", this.title ,"\n","El año de lanzamiento es: ",this.releaseYear,"\n","Los actores son: ", this.actors,"\n","La película ha sido firlmada en: ", this.nacionality,"\n","El director es: ",
+        this.director,"\n","El guionista es: " ,this.writer,"\n","El idioma original es: ", this.language,"\n","Está en la plataforma de: " ,this.platform,"\n","forma parte de Marvel: ", this.isMCU,"\n","El protagonista es: ",
+        this.mainCharacterName,"\n","El productor es: ", this.producer,"\n","La distribuidora es: ", this.distributor,"\n","El género es: ", this.genre)
     }
 }
