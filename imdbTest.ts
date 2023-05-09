@@ -30,5 +30,8 @@ let imdb1: Imdb = new Imdb (peliculas)
 let JSONimdb = JSON.stringify(imdb1)
 console.log(JSONimdb)
 
+// const fs = require('fs')
+// fs.writeFileSync(file, data[, options])
+
 
 
