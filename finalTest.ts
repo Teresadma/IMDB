@@ -1,13 +1,41 @@
 import {Movie} from "./movie";
 import {Imdb} from "./imdb";
 import {Professional} from "./professional";
-import * as fs from 'fs';
+var readlineSync = require('readline-sync');
+
+
+let personita = {
+    name: "",
+    age: 0,
+    weight: 0,
+    height:0,
+    isRetired:false,
+    nationality:"",
+    oscarsNumber:0,
+    profession:"",
+}
+personita.name = readlineSync.question("Cual es el nombre del actor?: ");
+personita.age = readlineSync.question("Cual es su edad?: ");
+personita.weight = readlineSync.question("Cuanto pesa?: ");
+personita.height = readlineSync.question("Cuanto mide?: ");
+personita.isRetired = readlineSync.question("Esta retirado?: ");
+personita.nationality = readlineSync.question("Cual es su nacionalidad?: ");
+personita.oscarsNumber = readlineSync.question("Cuantos Oscar tiene?: ");
+personita.profession = readlineSync.question("Cual es su profesion?: ")
+
+console.log(personita)
 
 let professional1: Professional = new Professional ("Pepito",45,70,185,true,"Española",4,"cantante");
 let professional2: Professional = new Professional ("Nanito",26,85,192,false,"Española",4,"peluquero");
 let professional3: Professional = new Professional ("Mayte",32,60,1170,true,"Española",4,"bailarina");
 
 let actores: Professional[] = [professional1,professional2,professional3]
+let personitaJSON = JSON.stringify(personita)
+console.log(personitaJSON)
+let personitaProf: Professional = JSON.parse(personitaJSON)
+
+actores.push(personitaProf)
+console.log(actores)
 
 let guionista: Professional = new Professional ("Sofía",23,56,1170,true,"Española",4,"bailarina");
 let director: Professional = new Professional ("Aitor",23,75,1170,false,"Española",4,"director");
@@ -26,17 +54,8 @@ pelicula.producer = "Jesus";
 pelicula.distributor = "Walt Disney";
 
 let imdb1: Imdb = new Imdb (peliculas)
-// console.log(imdb1)
 
-let JSONimdb = JSON.stringify(imdb1)
-// console.log(JSONimdb)
-
-
-fs.writeFileSync("imdbBBDD.json", JSONimdb)
-fs.readFileSync("imdbBBDD.json", "utf-8")
-// console.log(JSON.parse(JSONimdb))
-imdb1.escribirEnFicheroJSON("imdbBBDD.json")
-// console.log(imdb1.obtenerInstanciaIMDB("imdbBBDD.json"));
+imdb1.escribirEnFicheroJSON("finalTest.json")
 
 
 
